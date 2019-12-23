@@ -6,13 +6,15 @@ var {buildSchema} = require('graphql');
 
 var schema = buildSchema(`
     type Query {
-        message: String
+        message: String,
+        likes: Int
     }
 `);
 
 // Root resolver
 var root = {
-    message: () => 'hello grapheQL!!'
+    message: () => 'hello grapheQL!!',
+    likes: 2259
 };
 
 // Create an express server and GraphQL endpoint
